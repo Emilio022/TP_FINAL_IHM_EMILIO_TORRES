@@ -221,6 +221,7 @@ hr {
 }
 
 /* --- Estilos para Modo Oscuro --- */
+/* Estas reglas se aplican cuando el body tiene el atributo data-theme='dark' */
 body[data-theme='dark'] {
     background-color: #1a1a1a; /* Fondo muy oscuro */
     color: #e0e0e0; /* Texto claro */
