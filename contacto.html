@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Mi Sitio con Accesibilidad</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css"> 
+</head>
 <body>
     <header>
         <h1>Contáctanos</h1>
+        <button id="toggle-theme-btn" aria-label="Alternar modo claro y oscuro">🌙 Oscuro</button>
     </header>
     <nav>
         <ul>
@@ -25,16 +27,16 @@
             <form action="#" method="post">
                 <label for="nombre">Nombre Completo:</label><br>
                 <input type="text" id="nombre" name="nombre" aria-label="Introduce tu nombre completo" required><br><br>
-
+                
                 <label for="email">Correo Electrónico:</label><br>
                 <input type="email" id="email" name="email" aria-label="Introduce tu dirección de correo electrónico" required><br><br>
-
+                
                 <label for="asunto">Asunto:</label><br>
                 <input type="text" id="asunto" name="asunto" aria-label="Introduce el asunto de tu mensaje" required><br><br>
 
                 <label for="mensaje">Tu Mensaje:</label><br>
                 <textarea id="mensaje" name="mensaje" rows="6" cols="50" aria-label="Escribe tu mensaje aquí"></textarea><br><br>
-
+                
                 <button type="submit">Enviar Mensaje</button>
             </form>
         </section>
@@ -51,5 +53,7 @@
     <footer>
         <p>&copy; 2025 Mi Sitio de Prueba. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
