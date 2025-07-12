@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Sitio con Accesibilidad</title>
+    <style>
+        /* Estilos CSS básicos para el ejemplo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: #e2e2e2;
+            padding: 10px;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #004085;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #ccc;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        /* Adaptación básica para accesibilidad (ejemplo de contraste y tamaño) */
+        /* Para ceguera de colores: colores con alto contraste */
+        body {
+            background-color: #f0f0f0; /* Fondo claro */
+            color: #222; /* Texto oscuro */
+        }
+        header {
+            background-color: #0a4f91; /* Azul oscuro con buen contraste */
+            color: #ffffff; /* Texto blanco puro */
+        }
+        nav ul li a {
+            color: #0a4f91; /* Enlaces en azul oscuro */
+        }
+        h1, h2 {
+            color: #0a4f91; /* Títulos en azul oscuro */
+        }
+        /* Para problemas de tamaño del sitio: usa unidades relativas y permite zoom */
+        body {
+            font-size: 16px; /* Tamaño base para el cuerpo */
+        }
+        p {
+            font-size: 1em; /* 100% del tamaño base */
+        }
+        h1 {
+            font-size: 2.5em; /* Tamaño relativo para H1 */
+        }
+        h2 {
+            font-size: 1.8em; /* Tamaño relativo para H2 */
+        }
+        /* Media queries para adaptar a diferentes tamaños de pantalla (ejemplo muy básico) */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                margin: 10px auto;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenido a Mi Sitio de Prueba!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca">Acerca de</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#registro">Registro</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section id="inicio">
+            <h2>Página Principal</h2>
+            <p>Este es un sitio de ejemplo para tu trabajo práctico. Aquí puedes empezar a construir tu contenido.</p>
+            <p>El objetivo es demostrar la **capa de presentación** y las características de **accesibilidad**.</p>
+            <img src="https://via.placeholder.com/400x200?text=Imagen+de+Ejemplo" alt="Un paisaje genérico para ilustrar el contenido.">
+        </section>
+
+        <hr>
+
+        <section id="acerca">
+            <h2>Acerca de Nosotros</h2>
+            <p>Aquí irá información sobre la temática de tu sitio. Por ejemplo, si es sobre Paraguay, puedes hablar sobre su cultura, historia o geografía.</p>
+        </section>
+
+        <hr>
+
+        <section id="servicios">
+            <h2>Nuestros Servicios/Contenido</h2>
+            <p>Esta sección puede listar los diferentes tipos de contenido o productos que ofrece tu sitio.</p>
+            <ul>
+                <li>Opción 1</li>
+                <li>Opción 2</li>
+                <li>Opción 3</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Puedes incluir un formulario de contacto aquí. Asegúrate de que los campos sean accesibles.</p>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" aria-label="Introduce tu nombre completo" required><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" aria-label="Introduce tu dirección de correo electrónico" required><br><br>
+                
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" aria-label="Escribe tu mensaje aquí"></textarea><br><br>
+                
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="registro">
+            <h2>Registro de Usuario</h2>
+            <p>Esta será tu página clave para el registro de usuarios, aplicando la validación de formato regional de Paraguay. Por ahora es un placeholder.</p>
+            <form action="#" method="post">
+                <label for="reg_email">Correo Electrónico:</label><br>
+                <input type="email" id="reg_email" name="reg_email" aria-label="Introduce tu correo electrónico para registro" required><br><br>
+                
+                <label for="reg_password">Contraseña:</label><br>
+                <input type="password" id="reg_password" name="reg_password" aria-label="Introduce tu contraseña" required><br><br>
+
+                <label for="reg_ci">Cédula de Identidad (Paraguay):</label><br>
+                <input type="text" id="reg_ci" name="reg_ci" aria-label="Introduce tu número de cédula de identidad de Paraguay" placeholder="Ej: 1234567" pattern="[0-9]{6,8}" title="Debe contener entre 6 y 8 dígitos" required><br><br>
+                
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio de Prueba. Todos los derechos reservados.</p>
+        <p>Sitio creado para el trabajo práctico final con foco en accesibilidad.</p>
+    </footer>
+</body>
+</html>
