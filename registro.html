@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario - Mi Sitio con Accesibilidad</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header>
+        <h1>Registro de Usuario</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="registro.html">Registro</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section>
+            <h2>Crea tu Cuenta</h2>
+            <p>Por favor, completa el siguiente formulario para registrarte. Asegúrate de que tus datos sigan el formato regional de Paraguay.</p>
+            <form action="#" method="post">
+                <label for="nombre_reg">Nombre Completo:</label><br>
+                <input type="text" id="nombre_reg" name="nombre_reg" aria-label="Introduce tu nombre completo" required><br><br>
+
+                <label for="email_reg">Correo Electrónico:</label><br>
+                <input type="email" id="email_reg" name="email_reg" aria-label="Introduce tu dirección de correo electrónico" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Por favor, introduce un formato de correo electrónico válido."><br><br>
+
+                <label for="password_reg">Contraseña:</label><br>
+                <input type="password" id="password_reg" name="password_reg" aria-label="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una mayúscula, una minúscula y tener al menos 8 caracteres."><br><br>
+
+                <label for="ci_reg">Cédula de Identidad (Paraguay):</label><br>
+                <input type="text" id="ci_reg" name="ci_reg" aria-label="Introduce tu número de cédula de identidad de Paraguay" placeholder="Ej: 1234567" pattern="^[0-9]{6,8}$" title="Debe contener entre 6 y 8 dígitos numéricos." required><br><br>
+
+                <label for="telefono_reg">Número de Teléfono (Paraguay):</label><br>
+                <input type="tel" id="telefono_reg" name="telefono_reg" aria-label="Introduce tu número de teléfono de Paraguay" placeholder="Ej: 0981123456" pattern="^(09[6-9][0-9]{7}|[0-9]{6,8})$" title="Formato: 09XX XXX XXX o 6-8 dígitos para fijos." required><br><br>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mi Sitio de Prueba. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
