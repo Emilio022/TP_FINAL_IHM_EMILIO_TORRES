@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuario - Aprende Informática Fácil</title>
+    <title>Registro de Usuario - EduTech</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
-        <h1>Crea tu Cuenta Gratuita</h1>
+        <h1>Regístrate en EduTech</h1>
         <button id="toggle-theme-btn" aria-label="Alternar modo claro y oscuro">🌙 Oscuro</button>
     </header>
     <nav>
@@ -22,8 +22,8 @@
     </nav>
     <main class="container">
         <section>
-            <h2>Únete a Nuestra Comunidad de Aprendizaje</h2>
-            <p>Regístrate para acceder a contenido exclusivo, seguir tu progreso y recibir actualizaciones de nuevos cursos. Por favor, completa el siguiente formulario. Tus datos de identificación seguirán el formato regional de Paraguay.</p>
+            <h2>Crea tu Cuenta Gratuita</h2>
+            <p>Únete a nuestra comunidad de aprendizaje en informática. Regístrate para acceder a contenido exclusivo, seguir tu progreso y recibir actualizaciones de nuevos cursos. Por favor, completa el siguiente formulario. Tus datos de identificación seguirán el formato regional de Paraguay.</p>
             <form action="#" method="post" id="registroForm">
                 <label for="nombre_reg">Nombre Completo:</label><br>
                 <input type="text" id="nombre_reg" name="nombre_reg" aria-label="Introduce tu nombre completo" required><br><br>
@@ -32,7 +32,8 @@
                 <input type="email" id="email_reg" name="email_reg" aria-label="Introduce tu dirección de correo electrónico" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Por favor, introduce un formato de correo electrónico válido."><br><br>
                 
                 <label for="password_reg">Contraseña:</label><br>
-                <input type="password" id="password_reg" name="password_reg" aria-label="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una mayúscula, una minúscula y tener al menos 8 caracteres."><br><br>
+                <input type="password" id="password_reg" name="password_reg" aria-label="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una mayúscula, una minúscula y tener al menos 8 caracteres."><br>
+                <small><span id="password-hint">Debe contener al menos **8 caracteres**, incluyendo **un número**, **una mayúscula** y **una minúscula**.</span></small><br><br>
 
                 <label for="ci_reg">Cédula de Identidad (Paraguay):</label><br>
                 <input type="text" id="ci_reg" name="ci_reg" aria-label="Introduce tu número de cédula de identidad de Paraguay" placeholder="Ej: 1234567" pattern="^[0-9]{6,8}$" title="Debe contener entre 6 y 8 dígitos numéricos." required><br><br>
@@ -45,7 +46,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 [Nombre de tu Plataforma]. Todos los derechos reservados.</p>
+        <p>&copy; 2025 EduTech. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
