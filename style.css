@@ -299,3 +299,194 @@ body[data-theme='dark'] form button {
 body[data-theme='dark'] form button:hover {
     background-color: #6688ee;
 }
+
+/* Estilo para el botón de volver en la página de éxito */
+.btn-volver {
+    display: inline-block; /* Para que el padding y margin funcionen correctamente */
+    background-color: #007bff; /* Un azul amigable */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+/* Ajuste para modo oscuro del botón de volver */
+body[data-theme='dark'] .btn-volver {
+    background-color: #6a96e6; /* Azul más claro para contraste en oscuro */
+    color: #1a1a1a; /* Texto oscuro en el botón en modo oscuro */
+}
+
+body[data-theme='dark'] .btn-volver:hover {
+    background-color: #4c7ed9;
+}
+
+/* --- Nuevos Estilos para el Tema de Cursos --- */
+
+/* Estilo para el botón principal en el index.html */
+.btn-principal {
+    display: inline-block;
+    background-color: #28a745; /* Verde para un "llamado a la acción" */
+    color: white;
+    padding: 12px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el ratón */
+}
+
+/* Ajuste para modo oscuro del botón principal */
+body[data-theme='dark'] .btn-principal {
+    background-color: #4CAF50; /* Verde más claro para contraste */
+    color: #1a1a1a;
+}
+
+body[data-theme='dark'] .btn-principal:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para las tarjetas de curso destacado en index.html */
+.curso-destacado {
+    background-color: #e9f5ff; /* Un azul muy claro */
+    border: 1px solid #cce5ff;
+    border-left: 5px solid #007bff; /* Borde lateral azul fuerte */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.curso-destacado:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el ratón */
+}
+
+.curso-destacado h3 {
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.curso-destacado p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.curso-destacado .nivel,
+.curso-destacado .duracion {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+/* Ajustes para modo oscuro de las tarjetas de curso destacado */
+body[data-theme='dark'] .curso-destacado {
+    background-color: #3b3b3b;
+    border: 1px solid #555555;
+    border-left: 5px solid #88aaff; /* Azul más claro para el borde lateral */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme='dark'] .curso-destacado h3 {
+    color: #add8e6;
+}
+
+body[data-theme='dark'] .curso-destacado .nivel,
+body[data-theme='dark'] .curso-destacado .duracion {
+    background-color: #555555;
+    color: #e0e0e0;
+}
+
+/* Estilos para las tarjetas de curso en servicios.html */
+.curso-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.curso-card h3 {
+    color: #0a4f91;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.curso-card p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.curso-card ul {
+    list-style: disc inside; /* Bolitas para la lista */
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+
+.curso-card ul li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.btn-curso {
+    display: inline-block;
+    background-color: #007bff; /* Azul para el botón de curso */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-curso:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes para modo oscuro de las tarjetas de curso */
+body[data-theme='dark'] .curso-card {
+    background-color: #3b3b3b;
+    border: 1px solid #555555;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+body[data-theme='dark'] .curso-card h3 {
+    color: #add8e6;
+}
+
+body[data-theme='dark'] .curso-card ul li {
+    color: #cccccc;
+}
+
+body[data-theme='dark'] .btn-curso {
+    background-color: #88aaff;
+    color: #1a1a1a;
+}
+
+body[data-theme='dark'] .btn-curso:hover {
+    background-color: #6688ee;
+}

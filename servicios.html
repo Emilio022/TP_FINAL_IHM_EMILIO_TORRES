@@ -3,41 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Mi Sitio con Accesibilidad</title>
+    <title>Cursos - Aprende Informática Fácil</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
-        <h1>Nuestros Servicios/Contenido</h1>
+        <h1>Explora Nuestro Catálogo de Cursos</h1>
         <button id="toggle-theme-btn" aria-label="Alternar modo claro y oscuro">🌙 Oscuro</button>
     </header>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="acerca.html">Acerca de</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="servicios.html">Cursos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="registro.html">Registro</a></li>
         </ul>
     </nav>
     <main class="container">
         <section>
-            <h2>Lo que Ofrecemos</h2>
-            <p>Aquí puedes detallar los diferentes servicios, productos o tipos de contenido que ofrece tu sitio. Por ejemplo, si es un blog de viajes, puedes listar "Guías de Destino", "Consejos de Viaje", "Galerías de Fotos".</p>
-            <ul>
-                <li>**Servicio/Contenido 1**: Descripción detallada del primer elemento.</li>
-                <li>**Servicio/Contenido 2**: Descripción detallada del segundo elemento.</li>
-                <li>**Servicio/Contenido 3**: Descripción detallada del tercer elemento.</li>
-                <li>**Servicio/Contenido 4**: Descripción detallada del cuarto elemento.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Accesibilidad en esta Sección</h2>
-            <p>Recuerda que esta sección debe demostrar adaptación para la accesibilidad. Por ejemplo, si tienes una galería de imágenes aquí, asegúrate de que todas tengan texto alternativo (`alt` text).</p>
+            <h2>Cursos Disponibles</h2>
+            <p>Descubre nuestra variedad de cursos adaptados a diferentes niveles y áreas de la informática.</p>
+
+            <div class="curso-card">
+                <h3>Introducción a la Programación con Python</h3>
+                <p>Aprende los conceptos básicos de la programación y el lenguaje Python, ideal para principiantes.</p>
+                <ul>
+                    <li>Nivel: Principiante</li>
+                    <li>Duración: 20 horas</li>
+                    <li>Modalidad: Online</li>
+                </ul>
+                <a href="#" class="btn-curso" aria-label="Más información sobre Introducción a la Programación con Python">Ver Detalles</a>
+            </div>
+
+            <div class="curso-card">
+                <h3>Diseño Web Responsivo con HTML y CSS</h3>
+                <p>Domina la creación de sitios web modernos que se adaptan a cualquier dispositivo y tamaño de pantalla.</p>
+                <ul>
+                    <li>Nivel: Intermedio</li>
+                    <li>Duración: 25 horas</li>
+                    <li>Modalidad: Online</li>
+                </ul>
+                <a href="#" class="btn-curso" aria-label="Más información sobre Diseño Web Responsivo con HTML y CSS">Ver Detalles</a>
+            </div>
+
+            <div class="curso-card">
+                <h3>Fundamentos de Ciberseguridad</h3>
+                <p>Conoce los principios esenciales para proteger tus datos y sistemas en el entorno digital.</p>
+                <ul>
+                    <li>Nivel: Principiante</li>
+                    <li>Duración: 15 horas</li>
+                    <li>Modalidad: Online</li>
+                </ul>
+                <a href="#" class="btn-curso" aria-label="Más información sobre Fundamentos de Ciberseguridad">Ver Detalles</a>
+            </div>
+
+            <div class="curso-card">
+                <h3>Desarrollo de Aplicaciones Móviles con React Native</h3>
+                <p>Crea aplicaciones nativas para iOS y Android usando JavaScript y el framework React Native.</p>
+                <ul>
+                    <li>Nivel: Avanzado</li>
+                    <li>Duración: 40 horas</li>
+                    <li>Modalidad: Online</li>
+                </ul>
+                <a href="#" class="btn-curso" aria-label="Más información sobre Desarrollo de Aplicaciones Móviles con React Native">Ver Detalles</a>
+            </div>
+
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Mi Sitio de Prueba. Todos los derechos reservados.</p>
+        <p>&copy; 2025 [Nombre de tu Plataforma]. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
