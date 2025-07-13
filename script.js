@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
         body.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme); // Guarda la preferencia del usuario
         if (theme === 'dark') {
-            themeToggleButton.textContent = '☀️ Claro';
+            themeToggleButton.innerHTML = '☀️'; // Solo el icono de sol para modo claro
             themeToggleButton.setAttribute('aria-label', 'Activar modo claro');
         } else {
-            themeToggleButton.textContent = '🌙 Oscuro';
+            themeToggleButton.innerHTML = '🌙'; // Solo el icono de luna para modo oscuro
             themeToggleButton.setAttribute('aria-label', 'Activar modo oscuro');
         }
     };
