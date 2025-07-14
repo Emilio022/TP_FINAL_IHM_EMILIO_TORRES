@@ -1,4 +1,4 @@
-
+/* Estilos CSS básicos para el ejemplo */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,10 +9,10 @@ body {
 }
 header {
     background-color: #0056b3;
-    color: white; 
+    color: white; /* Color del texto por defecto en el header */
     padding: 10px 0;
     text-align: center;
-    position: relative; 
+    position: relative; /* Necesario para posicionar el botón de tema */
 }
 nav ul {
     list-style: none;
@@ -39,7 +39,7 @@ nav ul li a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h1, h2 {
-    color: #004085; 
+    color: #004085; /* Color por defecto para h1 y h2 en el contenido principal */
 }
 footer {
     text-align: center;
@@ -50,55 +50,57 @@ footer {
     font-size: 0.9em;
 }
 
+/* --- Adaptación para Accesibilidad --- */
 
+/* Para ceguera de colores: colores con alto contraste */
 body {
-    background-color: #f0f0f0; 
-    color: #222; 
+    background-color: #f0f0f0; /* Fondo claro con buen contraste */
+    color: #222; /* Texto oscuro con buen contraste */
 }
 header {
-    background-color: #0a4f91; 
-    color: #ffffff; 
+    background-color: #0a4f91; /* Azul oscuro para el header (con buen contraste) */
+    color: #ffffff; /* Texto blanco puro en el header */
 }
 
-
+/* Corrección para el título del header: asegurar que H1 dentro del header sea blanco */
 header h1 {
     color: #ffffff; 
 }
 
-
+/* Asegura que los enlaces de navegación tengan buen contraste */
 nav ul li a {
-    color: #0a4f91;
+    color: #0a4f91; /* Enlaces en azul oscuro para contraste */
 }
 nav ul li a:hover,
 nav ul li a:focus {
-    text-decoration: underline; 
-    color: #003366; 
+    text-decoration: underline; /* Subrayado al pasar el ratón o enfocar, crucial para accesibilidad */
+    color: #003366; /* Un azul más oscuro al interactuar */
 }
 
-
+/* Los H2 (títulos de secciones en el contenido) se mantienen en un azul que contrasta con el fondo blanco del container */
 h2 {
-    color: #0a4f91; 
+    color: #0a4f91; /* Títulos secundarios en azul oscuro */
 }
 
-
+/* Para problemas de tamaño del sitio: usa unidades relativas y permite zoom */
 body {
-    font-size: 16px; 
+    font-size: 16px; /* Tamaño base para el cuerpo, que otras unidades relativas tomarán como referencia */
 }
 p {
-    font-size: 1em; 
+    font-size: 1em; /* 100% del tamaño base del body */
 }
 h1 {
-    font-size: 2.5em; 
+    font-size: 2.5em; /* Tamaño relativo para H1, se escala con el tamaño del body */
 }
 h2 {
-    font-size: 1.8em;
+    font-size: 1.8em; /* Tamaño relativo para H2, se escala con el tamaño del body */
 }
 li {
-    font-size: 1em; 
+    font-size: 1em; /* Asegura que los elementos de lista también escalen */
 }
 
-
-@media (max-width: 768px) { 
+/* Media queries para adaptar a diferentes tamaños de pantalla (ejemplo básico de responsive design) */
+@media (max-width: 768px) { /* Para tablets y dispositivos más pequeños */
     body {
         padding: 15px;
     }
@@ -107,17 +109,17 @@ li {
         padding: 25px;
     }
     nav ul li {
-        display: block; 
+        display: block; /* En pantallas pequeñas, los ítems de navegación se apilan */
         margin: 5px 0;
     }
     #toggle-theme-btn {
-        position: static; 
+        position: static; /* En móviles, el botón se queda en el flujo normal */
         margin-top: 10px;
         transform: none;
     }
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 480px) { /* Para móviles */
     body {
         padding: 10px;
     }
@@ -126,44 +128,45 @@ li {
         padding: 15px;
     }
     h1 {
-        font-size: 2em; 
+        font-size: 2em; /* Reduce el tamaño del H1 en pantallas muy pequeñas */
     }
     h2 {
-        font-size: 1.5em; 
+        font-size: 1.5em; /* Reduce el tamaño del H2 en pantallas muy pequeñas */
     }
 }
 
 
+/* Estilos para formularios para mejorar la accesibilidad (labels claros, campos amplios) */
 form label {
-    display: block; 
+    display: block; /* Cada etiqueta en su propia línea para claridad */
     margin-bottom: 5px;
     font-weight: bold;
-    color: #333; 
+    color: #333; /* Color de texto legible para las etiquetas */
 }
 form input[type="text"],
 form input[type="email"],
 form input[type="password"],
 form input[type="tel"],
 form textarea {
-    width: 100%; 
+    width: 100%; /* Ocupa el ancho completo disponible */
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1em; 
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    font-size: 1em; /* Asegura que el texto en los campos también escale */
 }
 form textarea {
-    resize: vertical; 
+    resize: vertical; /* Permite redimensionar verticalmente, pero no horizontalmente */
 }
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="password"]:focus,
 form input[type="tel"]:focus,
 form textarea:focus {
-    border-color: #0a4f91; 
-    outline: none; 
-    box-shadow: 0 0 5px rgba(10, 79, 145, 0.5); 
+    border-color: #0a4f91; /* Borde azul al enfocar para indicar dónde está el usuario */
+    outline: none; /* Elimina el contorno por defecto del navegador */
+    box-shadow: 0 0 5px rgba(10, 79, 145, 0.5); /* Sombra para mejor indicación visual */
 }
 
 form button {
@@ -175,21 +178,21 @@ form button {
     cursor: pointer;
     font-size: 1.1em;
     font-weight: bold;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
 }
 form button:hover {
-    background-color: #003366; 
+    background-color: #003366; /* Color más oscuro al pasar el ratón */
 }
 
-
+/* Estilo para imágenes (ejemplo) */
 img {
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 15px 0; 
+    max-width: 100%; /* Asegura que las imágenes no desborden su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio extra debajo de las imágenes */
+    margin: 15px 0; /* Espaciado alrededor de la imagen */
 }
 
-
+/* Reglas para la línea horizontal */
 hr {
     border: 0;
     height: 1px;
@@ -197,67 +200,68 @@ hr {
     margin: 30px 0;
 }
 
-
+/* --- Estilos para el botón de alternar tema --- */
 #toggle-theme-btn {
-    background-color: #ffffff; 
-    color: #0a4f91; 
-    border: 1px solid #0a4f91; 
+    background-color: #ffffff; /* Blanco para el botón en modo claro */
+    color: #0a4f91; /* Texto azul oscuro */
+    border: 1px solid #0a4f91; /* Borde azul */
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9em;
-    position: absolute; 
-    top: 50%; 
-    right: 20px; 
-    transform: translateY(-50%);
+    position: absolute; /* Posiciona el botón en relación al header */
+    top: 50%; /* Centra verticalmente */
+    right: 20px; /* Margen desde la derecha */
+    transform: translateY(-50%); /* Ajusta para centrar perfectamente */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 #toggle-theme-btn:hover {
-    background-color: #e0e0e0; 
+    background-color: #e0e0e0; /* Un gris claro al pasar el ratón */
 }
 
-
+/* --- Estilos para Modo Oscuro --- */
+/* Estas reglas se aplican cuando el body tiene el atributo data-theme='dark' */
 body[data-theme='dark'] {
-    background-color: #1a1a1a; 
-    color: #e0e0e0; 
+    background-color: #1a1a1a; /* Fondo muy oscuro */
+    color: #e0e0e0; /* Texto claro */
 }
 
 body[data-theme='dark'] header {
-    background-color: #333333; 
+    background-color: #333333; /* Header oscuro */
 }
 
 body[data-theme='dark'] header h1 {
-    color: #ffffff; 
+    color: #ffffff; /* Título blanco en modo oscuro */
 }
 
 body[data-theme='dark'] nav ul {
-    background-color: #444444; 
+    background-color: #444444; /* Fondo de navegación oscuro */
 }
 
 body[data-theme='dark'] nav ul li a {
-    color: #cccccc; 
+    color: #cccccc; /* Enlaces de navegación claros */
 }
 body[data-theme='dark'] nav ul li a:hover,
 body[data-theme='dark'] nav ul li a:focus {
-    color: #ffffff; 
+    color: #ffffff; /* Enlaces de navegación más claros al interactuar */
 }
 
 body[data-theme='dark'] .container {
-    background-color: #2b2b2b; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    background-color: #2b2b2b; /* Contenedor de contenido oscuro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada en oscuro */
 }
 
 body[data-theme='dark'] h2 {
-    color: #add8e6; 
+    color: #add8e6; /* Un color claro para los títulos H2 en modo oscuro */
 }
 
 body[data-theme='dark'] footer {
-    background-color: #333333; 
-    color: #bbbbbb; 
+    background-color: #333333; /* Footer oscuro */
+    color: #bbbbbb; /* Texto del footer claro */
 }
 
-
+/* Estilos para el botón de alternar tema en modo oscuro */
 body[data-theme='dark'] #toggle-theme-btn {
     background-color: #555555;
     color: #ffffff;
@@ -267,7 +271,7 @@ body[data-theme='dark'] #toggle-theme-btn:hover {
     background-color: #666666;
 }
 
-
+/* Estilos para formularios en modo oscuro */
 body[data-theme='dark'] form label {
     color: #e0e0e0;
 }
@@ -296,36 +300,38 @@ body[data-theme='dark'] form button:hover {
     background-color: #6688ee;
 }
 
-
+/* Estilo para el botón de volver en la página de éxito */
 .btn-volver {
-    display: inline-block; 
-    background-color: #007bff; 
+    display: inline-block; /* Para que el padding y margin funcionen correctamente */
+    background-color: #007bff; /* Un azul amigable */
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
-    text-decoration: none; 
+    text-decoration: none; /* Quita el subrayado del enlace */
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .btn-volver:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
 }
 
-
+/* Ajuste para modo oscuro del botón de volver */
 body[data-theme='dark'] .btn-volver {
-    background-color: #6a96e6; 
-    color: #1a1a1a; 
+    background-color: #6a96e6; /* Azul más claro para contraste en oscuro */
+    color: #1a1a1a; /* Texto oscuro en el botón en modo oscuro */
 }
 
 body[data-theme='dark'] .btn-volver:hover {
     background-color: #4c7ed9;
 }
 
+/* --- Nuevos Estilos para el Tema de Cursos --- */
 
+/* Estilo para el botón principal en el index.html */
 .btn-principal {
     display: inline-block;
-    background-color: #28a745; 
+    background-color: #28a745; /* Verde para un "llamado a la acción" */
     color: white;
     padding: 12px 25px;
     margin-top: 20px;
@@ -337,12 +343,12 @@ body[data-theme='dark'] .btn-volver:hover {
 }
 
 .btn-principal:hover {
-    background-color: #218838; 
+    background-color: #218838; /* Verde más oscuro al pasar el ratón */
 }
 
-
+/* Ajuste para modo oscuro del botón principal */
 body[data-theme='dark'] .btn-principal {
-    background-color: #4CAF50; 
+    background-color: #4CAF50; /* Verde más claro para contraste */
     color: #1a1a1a;
 }
 
@@ -575,4 +581,37 @@ body[data-theme='dark'] .container section ul li:hover {
 
 body[data-theme='dark'] .container section ul li strong {
     color: #add8e6; /* Color claro para la palabra clave del valor en oscuro */
+}
+
+
+/* Estilos para el campo de contraseña con ojo */
+
+.password-container {
+    position: relative; /* Esencial para posicionar el icono dentro */
+    margin-bottom: 15px; /* Espacio debajo del campo, ajusta si es necesario */
+}
+
+/* Ajusta el ancho del input de contraseña para que el icono quepa */
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    width: calc(100% - 40px); /* Deja espacio para el icono */
+    padding-right: 30px;     /* Aumenta el padding para que el texto no lo cubra */
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px; /* Posiciona el icono a 10px del borde derecho del contenedor */
+    top: 50%; /* Lo centra verticalmente respecto al contenedor */
+    transform: translateY(-50%); /* Ajuste fino para alineación vertical */
+    cursor: pointer; /* Indica que es clickeable */
+    color: #666; /* Color del icono */
+    font-size: 1.3em; /* Tamaño del icono, puedes ajustarlo */
+    z-index: 10; /* Asegura que el icono esté por encima del input */
+    line-height: 1; /* Ayuda a la alineación vertical de caracteres Unicode */
+}
+
+/* Estilos para el modo oscuro, si aplica */
+body.dark-mode .toggle-password {
+    color: #bbb; /* Color del icono en modo oscuro */
 }
