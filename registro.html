@@ -3,75 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro - EduTech</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Registro de Usuario - EduTech</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>EduTech</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="acerca.html">Acerca de</a></li>
-                    <li><a href="servicios.html">Cursos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="registro.html" class="active">Registro</a></li>
-                </ul>
-            </nav>
-            <button id="toggle-theme-btn" aria-label="Alternar modo claro/oscuro">
-                <span class="icon-light">☀️</span>
-                <span class="icon-dark">🌙</span>
-            </button>
-        </div>
+        <h1>Regístrate en EduTech</h1>
+        <button id="toggle-theme-btn" aria-label="Alternar modo claro y oscuro">🌙</button>
     </header>
-
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+            <li><a href="servicios.html">Cursos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="registro.html">Registro</a></li>
+        </ul>
+    </nav>
     <main class="container">
-        <section class="registration-form">
-            <h2>Regístrate en EduTech</h2>
-            <form id="registrationForm">
-                <div class="form-group">
-                    <label for="fullName">Nombre Completo:</label>
-                    <input type="text" id="fullName" name="fullName" required aria-label="Ingrese su nombre completo" placeholder="Ej: Juan Pérez">
-                </div>
+        <section>
+            <h2>Crea tu Cuenta Gratuita</h2>
+            <p>Únete a nuestra comunidad de aprendizaje en informática. Regístrate para acceder a contenido exclusivo, seguir tu progreso y recibir actualizaciones de nuevos cursos. Por favor, completa el siguiente formulario. Tus datos de identificación seguirán el formato regional de Paraguay.</p>
+            <form action="#" method="post" id="registroForm">
+                <label for="nombre_reg">Nombre Completo:</label><br>
+                <input type="text" id="nombre_reg" name="nombre_reg" aria-label="Introduce tu nombre completo" required><br><br>
 
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required aria-label="Ingrese su correo electrónico" placeholder="Ej: su.correo@example.com">
-                </div>
+                <label for="email_reg">Correo Electrónico:</label><br>
+                <input type="email" id="email_reg" name="email_reg" aria-label="Introduce tu dirección de correo electrónico" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Por favor, introduce un formato de correo electrónico válido."><br><br>
+                
+                <label for="password_reg">Contraseña:</label><br>
+                <small><span id="password-hint">Debe contener al menos **8 caracteres**, incluyendo **un número**, **una mayúscula** y **una minúscula**.</span></small><br><br>
+                <input type="password" id="password_reg" name="password_reg" aria-label="Introduce tu contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número, una mayúscula, una minúscula y tener al menos 8 caracteres."><br>
+                
 
-                <div class="form-group">
-                    <label for="ci">Cédula de Identidad (Paraguay):</label>
-                    <input type="text" id="ci" name="ci" required pattern="^[0-9]{6,8}$" title="Solo números, 6 a 8 dígitos" aria-label="Ingrese su número de cédula de identidad, solo números" placeholder="Ej: 1234567">
-                </div>
+                <label for="ci_reg">Cédula de Identidad (Paraguay):</label><br>
+                <input type="text" id="ci_reg" name="ci_reg" aria-label="Introduce tu número de cédula de identidad de Paraguay" placeholder="Ej: 1234567" pattern="^[0-9]{6,8}$" title="Debe contener entre 6 y 8 dígitos numéricos." required><br><br>
 
-                <div class="form-group">
-                    <label for="phone">Teléfono (Paraguay):</label>
-                    <input type="tel" id="phone" name="phone" required pattern="^(09[6-9][0-9]{7}|[0-9]{6,8})$" title="Formato de celular (09xx xxxxxxx) o fijo (6-8 dígitos)" aria-label="Ingrese su número de teléfono" placeholder="Ej: 0981123456 o 612345">
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required 
-                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                           title="Debe contener al menos un número, una letra minúscula y una mayúscula, y al menos 8 caracteres." 
-                           aria-label="Ingrese su contraseña">
-                </div>
-                <small>Debe contener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y números.</small>
-
-                <div class="form-group">
-                    <label for="confirmPassword">Confirmar Contraseña:</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required aria-label="Confirme su contraseña">
-                </div>
+                <label for="telefono_reg">Número de Teléfono (Paraguay):</label><br>
+                <input type="tel" id="telefono_reg" name="telefono_reg" aria-label="Introduce tu número de teléfono de Paraguay" placeholder="Ej: 0981123456" pattern="^(09[6-9][0-9]{7}|[0-9]{6,8})$" title="Formato: 09XX XXX XXX o 6-8 dígitos para fijos." required><br><br>
+                
                 <button type="submit">Registrarse</button>
             </form>
         </section>
     </main>
-
     <footer>
-        <div class="container">
-            <p>&copy; 2025 EduTech. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2025 EduTech. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
