@@ -27,20 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Lógica para Mostrar/Ocultar Contraseña ---
-    const togglePassword = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('password');
 
-    if (togglePassword && passwordInput) { // Asegura que los elementos existan
-        togglePassword.addEventListener('click', function() {
-            // Alternar el tipo de input entre 'password' y 'text'
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-
-            // Cambiar el icono del ojo (Unicode)
-            this.textContent = (type === 'password') ? '👁️' : '🙈'; // Ojo abierto para ocultar (por defecto), ojo tachado para mostrar
-        });
-    }
 
     // --- Lógica para Validar que las Contraseñas Coincidan (en registro.html) ---
     const registrationForm = document.getElementById('registrationForm');

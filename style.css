@@ -583,35 +583,3 @@ body[data-theme='dark'] .container section ul li strong {
     color: #add8e6; /* Color claro para la palabra clave del valor en oscuro */
 }
 
-
-/* Estilos para el campo de contraseña con ojo */
-
-.password-container {
-    position: relative; /* Esencial para posicionar el icono dentro */
-    margin-bottom: 15px; /* Espacio debajo del campo, ajusta si es necesario */
-}
-
-/* Ajusta el ancho del input de contraseña para que el icono quepa */
-.password-container input[type="password"],
-.password-container input[type="text"] {
-    width: calc(100% - 40px); /* Deja espacio para el icono */
-    padding-right: 30px;     /* Aumenta el padding para que el texto no lo cubra */
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho */
-}
-
-.toggle-password {
-    position: absolute;
-    right: 10px; /* Posiciona el icono a 10px del borde derecho del contenedor */
-    top: 50%; /* Lo centra verticalmente respecto al contenedor */
-    transform: translateY(-50%); /* Ajuste fino para alineación vertical */
-    cursor: pointer; /* Indica que es clickeable */
-    color: #666; /* Color del icono */
-    font-size: 1.3em; /* Tamaño del icono, puedes ajustarlo */
-    z-index: 10; /* Asegura que el icono esté por encima del input */
-    line-height: 1; /* Ayuda a la alineación vertical de caracteres Unicode */
-}
-
-/* Estilos para el modo oscuro, si aplica */
-body.dark-mode .toggle-password {
-    color: #bbb; /* Color del icono en modo oscuro */
-}

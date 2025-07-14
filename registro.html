@@ -50,21 +50,19 @@
                     <input type="tel" id="phone" name="phone" required pattern="^(09[6-9][0-9]{7}|[0-9]{6,8})$" title="Formato de celular (09xx xxxxxxx) o fijo (6-8 dígitos)" aria-label="Ingrese su número de teléfono" placeholder="Ej: 0981123456 o 612345">
                 </div>
 
-                <div class="form-group password-container">
+                <div class="form-group">
                     <label for="password">Contraseña:</label>
                     <input type="password" id="password" name="password" required 
-                           pattern="(?=.*\d)(?=.*[a-z])(?=(.*[A-Z]){1,}).{8,}" 
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                            title="Debe contener al menos un número, una letra minúscula y una mayúscula, y al menos 8 caracteres." 
                            aria-label="Ingrese su contraseña">
-                    <span class="toggle-password" id="togglePassword">&#128065;</span> </div>
+                </div>
                 <small>Debe contener al menos 8 caracteres, incluyendo mayúsculas, minúsculas y números.</small>
 
                 <div class="form-group">
                     <label for="confirmPassword">Confirmar Contraseña:</label>
                     <input type="password" id="confirmPassword" name="confirmPassword" required aria-label="Confirme su contraseña">
                 </div>
-                <small id="passwordMatchError" style="color: red; display: none;">Las contraseñas no coinciden.</small>
-
                 <button type="submit">Registrarse</button>
             </form>
         </section>
